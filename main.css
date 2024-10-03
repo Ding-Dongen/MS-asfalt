@@ -7,8 +7,9 @@
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     line-height: 1.5;
-    color: #333;
+    color: #141414;
     margin: 0 auto;
+    background-color:  #f58800;
 }
 a {
     color: inherit;
@@ -17,28 +18,28 @@ a {
 /* Header styles */
 header {
     display: flex;
-    justify-content: space-between;
+    gap: 2rem;
     align-items: center;
     padding: 1rem;
-    background-color: #fdf21c;
+    background-color: #f8bc24;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
 }
 
-nav {
-    display: flex;
+.nav-links {
+    display: none;
 }
-nav a {
+.nav-links a {
     margin-left: 1rem;
     font-size: 1.2rem;
 }
-nav a:hover {
+.nav-links a:hover {
     text-decoration: underline;
 }
 .mobile-menu-toggle {
-    display: none;
+    display: block;
     background: none;
     border: none;
     font-size: 1.5rem;
@@ -46,22 +47,19 @@ nav a:hover {
 }
 /* Hero section styles */
 .hero {
-    background-color: #000;
-    color: #fff;
+    background-color: #ff8928;
     text-align: center;
     padding: 6rem 1rem 4rem;
-}
-.hero ul {
-    display: inline-block;
 }
 .hero h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
 }
 .hero p {
-    max-width: 600px;
-    margin: 0 auto 2rem;
-    color: #ccc;
+    margin-top: 1rem;
+}
+.hero-img {
+    display: none;
 }
 .button {
     display: inline-block;
@@ -87,7 +85,7 @@ nav a:hover {
 }
 /* Services section styles */
 .services {
-    background-color: #f8f8f8;
+    background-color: #266867;
     padding: 4rem 1rem;
 }
 .services h2, .about h2, .contact h2 {
@@ -132,16 +130,14 @@ nav a:hover {
     min-width: 300px;
     margin-right: 2rem;
 }
-.about-image {
-    flex: 1;
-    min-width: 300px;
-    height: 300px;
-    background-color: #ccc;
-    border-radius: 0.5rem;
+.about-content img {
+    width: 350px;
+    border-radius: 5%;
 }
+
 /* Contact section styles */
 .contact {
-    background-color: #f8f8f8;
+    background-color: #569e9d;
     padding: 4rem 1rem;
     text-align: center;
 }
@@ -179,27 +175,20 @@ nav a:hover {
 /* Footer styles */
 footer {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 1rem;
-    background-color: #f8f8f8;
-    border-top: 1px solid #eaeaea;
+    background-color: #f58800;
+    border-top: 1px solid #f58800;
     font-size: 0.875rem;
 }
 /* Responsive adjustments */
-@media (max-width: 768px) {
-    .mobile-menu-toggle {
-        display: block;
+@media (min-width: 768px) {
+    body {
+        max-width: 720px;
     }
-    nav {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background-color: #f8f8f8;
-        flex-direction: column;
-        padding: 1rem;
+    header {
+        justify-content: space-between;
     }
     nav.active {
         display: flex;
@@ -207,8 +196,39 @@ footer {
     nav a {
         margin: 0.5rem 0;
     }
+    .hero {
+        width: 100%;
+    }
+    .wrapper-grid {
+        display: grid;
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+        grid-template-rows: repeat(3, minmax(0, 1fr));
+    }
+    .hero h1 {
+        grid-column: 1 / 12;
+        margin-bottom: 0;
+        padding: 2rem;
+    }
+    .hero p {
+        grid-column: 1 / 8 ;
+        margin-top: 0;
+        padding-right: 1rem;
+        font-weight: 500;
+    }
+    .hero-img {
+        display: block;
+        grid-column: 8 / 13;
+        grid-row: 1 / 4;
+    }
+    .hero-img img {
+        width: 300px;
+        border-radius: 5%;
+    }    
     .about-content {
         flex-direction: column;
+    }
+    .about-content img {
+        display: none;
     }
     .about-text, .about-image {
         margin-right: 0;
@@ -225,10 +245,29 @@ footer {
         justify-content: space-between;
         align-items: center;
         padding: 1rem;
-        background-color: #fdf21c;
+        background-color: #f8bc24;
         position: fixed;
         top: 0;
         left: 11.8%;
         max-width: 1320px;
+    }
+    .mobile-menu-toggle {
+        display: none;
+    }
+    .nav-links {
+        display: block;
+        gap: 2rem;
+    }
+    .hero-img img {
+        width: 650px;
+    }    
+    .hero-img {
+        display: block;
+        grid-column: 7 / 12;
+        grid-row: 1 / 4;
+    }
+    .hero p {
+        grid-column: 1 / 7 ;
+        
     }
 }
