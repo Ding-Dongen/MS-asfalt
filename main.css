@@ -52,6 +52,9 @@ nav a:hover {
     text-align: center;
     padding: 6rem 1rem 4rem;
 }
+.hero ul {
+    display: inline-block;
+}
 .hero h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
