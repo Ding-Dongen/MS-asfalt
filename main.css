@@ -23,9 +23,8 @@ header {
     background-color: #fdf21c;
     position: fixed;
     top: 0;
-    left: 11.75%;
-    right: 11.75%;
-    z-index: 1000;
+    left: 0;
+    right: 0;
 }
 
 nav {
@@ -220,6 +219,16 @@ footer {
 @media (min-width: 1400px) {
     body {
         max-width: 1320px;
-        
+    }
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        background-color: #fdf21c;
+        position: fixed;
+        top: 0;
+        left: 11.8%;
+        max-width: 1320px;
     }
 }
