@@ -12,8 +12,8 @@
         <a href="#" class="logo">
             <img src="./images/Logo (5).jpg" alt="Company Logo">
         </a>
-        <a href="https://www.facebook.com/MSasfalt" target="_blank"><img src="./images/32px-2023_Facebook_icon.svg.png" alt=""></a>
-        <span>For Befaring, Ring +4790602161</span>
+        <!-- <a href="https://www.facebook.com/MSasfalt" target="_blank"><img src="./images/32px-2023_Facebook_icon.svg.png" alt=""></a> -->
+        <a class="free-pricing" href="#contact"><span class="pricing-text">For Gratis Befaring</span><span class="discover-more"><i class="fa-solid fa-chevron-down"></i></span></a>
         <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">☰</button>
         <nav class="nav-links">
             <a href="#services">Service</a>
@@ -59,15 +59,22 @@
             <h2>Om MS asfalt</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>Norsk Asfaltbedrift AS er et selskap som har satt sitt preg på den norske landskapsbildet, bokstavelig talt. Med røtter som strekker seg tilbake til tidlig på 1900-tallet, har vi vært med på å forme infrastruktur i Norge gjennom kvalitet og innovasjon i asfaltproduksjon og -legging.
-
-                        Vår Historie
-                        Selskapet ble grunnlagt som en liten familiebedrift i Oslo, men har siden vokst til å bli en av de ledende aktørene innen asfaltindustrien i Norge. Fra de første små prosjektene med håndlegging av asfalt til dagens bruk av moderne teknologi og maskiner, har vi alltid prioritert kvalitet og holdbarhet.</p>
-                        <ul>
-                            <li>Asfaltproduksjon: Vi produserer ulike typer asfaltblanding, tilpasset de norske klimaforholdene, som sikrer lang levetid og motstand mot både vinterkulde og sommervarme.</li>
-                        </ul>  
+                    <p>MS Asfalt AS, etablert i 1988, opererer hovedsakelig fra Båstad i Norge og spesialiserer seg på asfaltering og veibygging. Med en liten, men dedikert arbeidsstyrke på fem ansatte, fokuserer de på kvalitet og lokal tilstedeværelse. Deres primære aktiviteter inkluderer oppretting og utlegging av asfalt på gårdsplasser, mindre parkeringsplasser, og gangveier.</p>
                 </div>
                 <img src="./images/hero-image.jpg" alt="Image of 3 trucks">
+            </div>
+        </section>
+        <section class="main-gallary">
+            <h2 >Galleri</h2>
+            <div class="full-img" id="fullImgBox">
+                <img src="./images/gallary/img1.jpg" alt="" id="fullImg">
+                <span onclick="closeFullImg()">X</span>
+            </div>
+            <div class="img-gallary">
+                <img src="./images/gallary/img1.jpg" alt="" onclick="openFullImg(this.src)">
+                <img src="./images/gallary/img2.jpg" alt="" onclick="openFullImg(this.src)">
+                <img src="./images/gallary/img3.jpg" alt="" onclick="openFullImg(this.src)">
+                <img src="./images/gallary/img4.jpg" alt="" onclick="openFullImg(this.src)">
             </div>
         </section>
         <section id="contact" class="contact">
